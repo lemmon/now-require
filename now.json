@@ -1,0 +1,14 @@
+{
+  "name": "now-require",
+  "scope": "lemmon",
+  "version": 2,
+  "regions": ["bru"],
+  "builds": [
+    { "src": "api/index.js", "use": "@now/node" },
+    { "src": "app/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/api", "dest": "/api/index.js" },
+    { "src": "/.*", "dest": "/app/index.js" }
+  ]
+}
